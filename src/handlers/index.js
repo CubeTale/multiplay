@@ -4,7 +4,7 @@ import CustomError from '../utils/error/customError.js';
 import { ErrorCodes } from '../utils/error/errorCodes.js';
 import createGameHandler from './game/createGame.handler.js';
 import joinGameHandler from './game/joinGame.handler.js';
-import updateLocationHandler from './game/updateLocation.handler.js';
+import locationUpdateHandler from './game/locationUpdate.handler.js';
 
 const handlers = {
   [HANDLER_IDS.INITIAL]: {
@@ -20,8 +20,8 @@ const handlers = {
     protoType: 'game.JoinGamePayload',
   },
   [HANDLER_IDS.UPDATE_LOCATION]: {
-    handler: updateLocationHandler,
-    protoType: 'game.UpdateLocationPayload',
+    handler: locationUpdateHandler,
+    protoType: 'game.LocationUpdatePayload',
   },
   // 다른 핸들러들을 추가
 };

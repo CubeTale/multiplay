@@ -3,7 +3,7 @@ import { handleError } from '../../utils/error/errorHandler.js';
 import CustomError from '../../utils/error/customError.js';
 import { ErrorCodes } from '../../utils/error/errorCodes.js';
 
-const updateLocationHandler = ({ socket, userId, payload }) => {
+const locationUpdateHandler = ({ socket, userId, payload }) => {
   try {
     const { gameId, x, y } = payload;
     const gameSession = getGameSession(gameId);
@@ -25,4 +25,4 @@ const updateLocationHandler = ({ socket, userId, payload }) => {
   }
 };
 
-export default updateLocationHandler;
+export default locationUpdateHandler;
