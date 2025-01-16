@@ -15,7 +15,7 @@ export const packetParser = (data) => {
   } catch (error) {
     throw new CustomError(ErrorCodes.PACKET_DECODE_ERROR, '패킷 디코딩 중 오류가 발생했습니다.');
   }
-
+  // console.log(packet.handlerId);
   const handlerId = packet.handlerId;
   const userId = packet.userId;
   const clientVersion = packet.clientVersion;

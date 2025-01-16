@@ -24,7 +24,7 @@ const joinGameHandler = ({ socket, userId, payload }) => {
       gameSession.addUser(user);
     }
 
-    console.log(getAllGameSessions());
+    // console.log(getAllGameSessions());
 
     const joinGameResponse = createResponse(
       HANDLER_IDS.JOIN_GAME,

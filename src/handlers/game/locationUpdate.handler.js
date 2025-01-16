@@ -2,6 +2,7 @@ import { getGameSession } from '../../session/game.session.js';
 import { handleError } from '../../utils/error/errorHandler.js';
 import CustomError from '../../utils/error/customError.js';
 import { ErrorCodes } from '../../utils/error/errorCodes.js';
+import { gameSessions } from '../../session/sessions.js';
 
 const locationUpdateHandler = ({ socket, userId, payload }) => {
   try {
@@ -14,6 +15,7 @@ const locationUpdateHandler = ({ socket, userId, payload }) => {
 
     const user = gameSession.getUser(userId);
     if (!user) {
+      // console.log(payload, gameSessions, userId, gameSession.users[0].id);
       throw new CustomError(ErrorCodes.USER_NOT_FOUND, '유저를 찾을 수 없습니다.');
     }
     user.updatePosition(x, y);

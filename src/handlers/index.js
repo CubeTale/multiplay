@@ -19,7 +19,7 @@ const handlers = {
     handler: joinGameHandler,
     protoType: 'game.JoinGamePayload',
   },
-  [HANDLER_IDS.UPDATE_LOCATION]: {
+  [HANDLER_IDS.LOCATION_UPDATE]: {
     handler: locationUpdateHandler,
     protoType: 'game.LocationUpdatePayload',
   },
